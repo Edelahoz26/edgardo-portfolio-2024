@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*     @apply text-white; */
+  color: white;
+}
+
+@layer base {
+  h1 {
+    @apply font-sans text-3xl font-bold tracking-wide leading-tight;
+  }
+  h2 {
+    @apply font-sans text-2xl font-semibold tracking-wide leading-tight;
+  }
+  h3 {
+    @apply font-sans text-xl font-semibold tracking-wide leading-tight;
+  }
+  h4 {
+    @apply font-sans text-lg font-medium tracking-wide leading-tight;
+  }
+  h5 {
+    @apply font-sans text-base font-medium tracking-wide leading-tight;
+  }
+  p {
+    @apply font-sans text-xl font-normal tracking-normal leading-relaxed;
+  }
+}
