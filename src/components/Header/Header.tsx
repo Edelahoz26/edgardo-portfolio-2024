@@ -13,14 +13,15 @@ const Header: FC<HeaderPros> = ({ items }) => {
     <>
       <div className="bg-[#111418] h-full w-full flex flex-col max-lg:hidden">
         <div className="flex justify-center flex-col max-lg:flex-0 pt-8">
-          <a href="/" className="lg:mb-auto mt-0 lg:mt-4 text-center">
-            <span className="bg-gray-800 rounded-full p-2 lg:mb-1 hidden lg:inline-block">
+          <a href="/" className="lg:mb-auto mt-0 lg:mt-4 text-center ">
+            <span className="bg-gray-800 rounded-full p-2 lg:mb-1 hidden lg:inline-block ">
               <img
                 className="w-40 h-40 rounded-full block object-cover"
                 src={imgLogo}
                 title="Soy Edgardo"
                 alt="Profile Image"
                 loading="lazy"
+                 draggable="false"
               />
             </span>
             <h1 className="text-xl text-center mb-0 lg:block">
@@ -81,7 +82,7 @@ const Header: FC<HeaderPros> = ({ items }) => {
                   to={"https://github.com/Edelahoz26"}
                   aria-label="GitHub"
                   title="GitHub"
-                  className="text-gray-400 "
+                  className="text-gray-400"
                 >
                   <GitHub className="mr-5" fontSize="small" />
                 </Link>

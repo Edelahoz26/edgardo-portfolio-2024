@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { ContentCopy, DoneAll } from "@mui/icons-material";
-import { useState } from "react";
+import { FaFileDownload } from "react-icons/fa";
+import curriculum from "../../assets/pdf/Edgardo_De la hoz_CV.pdf";
 import imgColombia from "../../assets/images/colombia.png"
 
 const AboutMe = () => {
@@ -59,7 +61,7 @@ const AboutMe = () => {
             />
           </p>
 
-          <Link to={"https://www.flipsnack.com/557F7ADD75E/edgardo_de-la-hoz_cv/full-view.html"}
+          <Link to={curriculum} target="_blank" download
           >
             <Button
               variant="contained"
@@ -71,9 +73,13 @@ const AboutMe = () => {
                 fontWeight: "600",
                 "&:hover": { background: "#4ade80" },
                 height: "50px",
-                fontSize: "16px"
+                fontSize: "16px",
               }}>
-              Descargar HV
+              Descargar CV
+              <span>
+                <a href="" ></a>
+                  <FaFileDownload className="text-xl ml-2" />
+              </span>
             </Button>
           </Link>
         </div>

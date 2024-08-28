@@ -1,5 +1,4 @@
 import Footer from "../../components/Footer/Footer";
-
 import backgroundHero from "../../assets/images/backgroundHero.jpg"
 import { lazy } from "react";
 import { MenuItem } from "../../types/menuItem";
@@ -85,7 +84,7 @@ const Home = () => {
           </section>
           <section>
           <div className="w-full py-[72px] px-14 max-lg:px-3 flex flex-col text-[#111418]">
-          <TitleSection items={{title: "ALGUNOS DE MIS", subTitle:"Proyectos"}}/>
+          <TitleSection items={{title: "Portafolio", subTitle:"Proyectos"}}/>
               <Project />
             </div>
           </section>
