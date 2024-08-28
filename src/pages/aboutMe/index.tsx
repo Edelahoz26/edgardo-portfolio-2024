@@ -43,7 +43,7 @@ const AboutMe = () => {
           <p className="flex gap-2 border-b-[#eaeaea] border-b-2 pb-2">
             <span className="font-semibold">Email: </span>
             <a href={`mailto:${textToCopy}`} className="text-green-400 hover:text-green-500">{textToCopy}</a>
-            <span onClick={handleCopy} className=" max-lg:ml-3  cursor-pointer">
+            <span onClick={handleCopy} className="   cursor-pointer">
               {!isClicked ? <ContentCopy titleAccess="Copiar"/> : <DoneAll color="success" />}
             </span>
           </p>

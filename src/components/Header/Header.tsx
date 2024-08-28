@@ -44,7 +44,7 @@ const Header: FC<HeaderPros> = ({ items }) => {
         </div>
         <div className="flex-none w-full h-14 text-center max-lg:flex-1 max-lg:content-center max-lg:h-full hover:text-gray-600 transition-all duration-[0.2s] ease-in text-gray-400">
           <Link
-            to={"/"}
+            to={"https://github.com/Edelahoz26"}
             aria-label="GitHub"
             title="GitHub"
             className=""
@@ -73,16 +73,15 @@ const Header: FC<HeaderPros> = ({ items }) => {
             sx={{
               backgroundColor: "#111418",
               height: "70px",
-            }}
-          >
+            }}>
             <div className="flex justify-between w-full items-center ">
               <h1 className="text-lg text-white">Edgardo De la hoz</h1>
               <div>
                 <Link
-                  to={"/"}
+                  to={"https://github.com/Edelahoz26"}
                   aria-label="GitHub"
                   title="GitHub"
-                  className="text-gray-400"
+                  className="text-gray-400 "
                 >
                   <GitHub className="mr-5" fontSize="small" />
                 </Link>
