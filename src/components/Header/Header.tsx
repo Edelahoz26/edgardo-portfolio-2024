@@ -4,6 +4,7 @@ import { Close, Dehaze, GitHub} from "@mui/icons-material";
 import imgLogo from "../../assets/images/img CV.png";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { HeaderPros } from "../../types/menuItem";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Header: FC<HeaderPros> = ({ items }) => {
   const [enableAccordion, setEnableAccordion] = useState(false);
@@ -15,6 +16,7 @@ const Header: FC<HeaderPros> = ({ items }) => {
         <div className="flex justify-center flex-col max-lg:flex-0 pt-8">
           <a href="/" className="lg:mb-auto mt-0 lg:mt-4 text-center ">
             <span className="bg-gray-800 rounded-full p-2 lg:mb-1 hidden lg:inline-block ">
+              <LazyLoadImage src={imgLogo} alt="Profile Image" effect="blur"/>
               <img
                 className="w-40 h-40 rounded-full block object-cover"
                 src={imgLogo}

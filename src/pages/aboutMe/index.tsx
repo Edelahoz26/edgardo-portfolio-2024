@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { ContentCopy, DoneAll } from "@mui/icons-material";
 import { FaFileDownload } from "react-icons/fa";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import curriculum from "../../assets/pdf/Edgardo_De la hoz_CV.pdf";
 import imgColombia from "../../assets/images/colombia.png"
 
@@ -54,9 +55,10 @@ const AboutMe = () => {
           </p>
           <p className="flex gap-2 border-b-[#eaeaea] mb-4">
             <span className="font-semibold ">De:</span> Barranquilla, Atlantico{" "}
-            <img
+            <LazyLoadImage
               src={imgColombia}
               alt="Bandera de Colombia"
+              effect="blur"
               title="Colombia"
             />
           </p>
