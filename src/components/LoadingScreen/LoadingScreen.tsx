@@ -3,7 +3,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 const LoadingScreen = () => {
   return (
     <div className="bg-[#111418] h-screen w-screen flex justify-center items-center">
-      <LazyLoadImage src={iconPage} alt="iconPage"  effect="blur"/>
+      <LazyLoadImage src={iconPage} alt="iconPage"/>
       <h2 >Loading...</h2>
     </div>
   )
