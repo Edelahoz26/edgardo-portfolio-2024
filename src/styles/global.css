@@ -30,7 +30,7 @@ body {
     @apply font-sans text-base font-medium tracking-wide leading-tight;
   }
   p {
-    @apply font-sans text-xl font-normal tracking-normal leading-relaxed;
+    @apply font-sans text-lg font-normal tracking-normal leading-relaxed;
   }
 }
 

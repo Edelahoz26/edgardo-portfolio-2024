@@ -25,11 +25,11 @@ const AboutMe = () => {
     <div className=" w-full flex flex-col justify-center relative text-wrap ">
       <div className="md:flex  w-full h-auto mt-12 md:px-36">
         <div className="flex flex-col w-full max-lg:text-center md:px-3 mb-4">
-          <h1 className="text-3xl mb-5">
-            Soy <span className="text-green-400">Edgardo De la hoz</span>, un
+          <h1 className="text-3xl mb-5 text-[#eeeeee]">
+            Soy <span className="text-[#0091ea]">Edgardo De la hoz</span>, un
             Desarrollador Frontend
           </h1>
-          <p className="text-[#4c4d4d]">
+          <p className="text-[#eeeeee]">
             Estoy estudiando ingeniería de sistemas con enfoque en desarrollo
             front-end. Tengo conocimientos de React, Next.js, TypeScript,
             JavaScript, API Management, GitHub, CSS y HTML. Me adapto
@@ -39,13 +39,13 @@ const AboutMe = () => {
           </p>
         </div> 
 
-        <div className="flex flex-col max-lg:justify-start md:px-3 gap-4 text-[#4c4d4d]">
+        <div className="flex flex-col max-lg:justify-start md:px-3 gap-4 text-[#757575]">
           <p className="flex gap-2 border-b-[#eaeaea] border-b-2 pb-2">
             <span className="font-semibold ">Name:</span> Edgardo De la hoz
           </p>
           <p className="flex gap-2 border-b-[#eaeaea] border-b-2 pb-2">
             <span className="font-semibold">Email: </span>
-            <a href={`mailto:${textToCopy}`} className="text-green-400 hover:text-green-500">{textToCopy}</a>
+            <a href={`mailto:${textToCopy}`} className="text-[#0091ea] hover:text-[#01579b]">{textToCopy}</a>
             <span onClick={handleCopy} className="   cursor-pointer">
               {!isClicked ? <ContentCopy titleAccess="Copiar"/> : <DoneAll color="success" />}
             </span>
@@ -71,15 +71,14 @@ const AboutMe = () => {
               sx={{
                 padding:"2rem 3rem",
                 borderRadius: "4rem",
-                background: "#4ade80",
+                background: "#0091ea",
                 fontWeight: "600",
-                "&:hover": { background: "#4ade80" },
+                "&:hover": { background: "#01579b]" },
                 height: "50px",
                 fontSize: "16px",
               }}>
               Descargar CV
               <span>
-                <a href="" ></a>
                   <FaFileDownload className="text-xl ml-2" />
               </span>
             </Button>

@@ -15,10 +15,10 @@ const LandingPage: FC<LandingPageProps>= ({content}) => {
           borderRadius:"4rem",
           padding:"0.8rem 2.6rem",
           fontWeight: "500",
-          border:"2px solid #4ade80",
-          color: "#4ade80",
+          border:"2px solid #0091ea",
+          color: "#0091ea",
           transition:"all 0.5s ease",
-          '&:hover': { background: "#4ade80",color:"white", border:"2px solid #4ade80"},
+          '&:hover': { background: "#0091ea",color:"white", border:"2px solid #0091ea"},
        }} className="">Contáctame</Button>
        <span className="absolute bottom-0 animate-bounce cursor-pointer">
         <KeyboardArrowDownIcon sx={{fontSize:"40px"}} />

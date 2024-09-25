@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { Link } from "react-router-dom";
-import { Close, Dehaze, GitHub} from "@mui/icons-material";
+import { Close, Dehaze, GitHub, LinkedIn} from "@mui/icons-material";
 import imgLogo from "../../assets/images/img CV.png";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { HeaderPros } from "../../types/menuItem";
@@ -12,7 +12,7 @@ const Header: FC<HeaderPros> = ({ items }) => {
   
   return (
     <>
-      <div className="bg-[#111418] h-full w-full flex flex-col max-lg:hidden">
+      <div className="bg-[#111418] h-full w-full flex flex-col max-lg:hidden border-r-zinc-800 border-r-[1px]">
         <div className="flex justify-center flex-col max-lg:flex-0 pt-8">
           <a href="/" className="lg:mb-auto mt-0 lg:mt-4 text-center ">
             <span className="bg-gray-800 rounded-full px-2 pt-2 lg:mb-1 hidden lg:inline-block ">
@@ -22,7 +22,7 @@ const Header: FC<HeaderPros> = ({ items }) => {
               effect="blur"
               title="Soy Edgardo"
               draggable="false" 
-              className="w-40 h-40 rounded-full block object-cover "/>
+              className="w-40 h-40 rounded-full block object-cover"/>
             </span>
             <h1 className="text-xl text-center mb-0 lg:block">
               Edgardo De la hoz
@@ -35,7 +35,7 @@ const Header: FC<HeaderPros> = ({ items }) => {
               {items.map((item, index) => (
                 <li
                   key={index}
-                  className="hover:text-green-400 font-medium transition-all duration-[0.2s] ease-in"
+                  className="hover:text-[#0091ea] font-medium transition-all duration-[0.2s] ease-in"
                 >
                   {<Link to={`${item.link}`}><p>{item.label}</p></Link>}
                 </li>
@@ -43,14 +43,22 @@ const Header: FC<HeaderPros> = ({ items }) => {
             </ul>
           </nav>
         </div>
-        <div className="flex-none w-full h-14 text-center max-lg:flex-1 max-lg:content-center max-lg:h-full hover:text-gray-600 transition-all duration-[0.2s] ease-in text-gray-400">
+        <div className="flex w-full h-14 justify-center gap-3 max-lg:flex-1 max-lg:content-center max-lg:h-full ">
           <Link
             to={"https://github.com/Edelahoz26"}
             aria-label="GitHub"
             title="GitHub"
-            className=""
+            className="hover:text-gray-600 transition-all duration-[0.2s] ease-in text-gray-400"
           >
             <GitHub />
+          </Link>
+          <Link
+            to={"https://linkedin.com/in/edgardo-de-la-hoz-1b101b24b"}
+            aria-label="LinkedIn"
+            title="LinkedIn"
+            className="hover:text-gray-600 transition-all duration-[0.2s] ease-in text-gray-400 "
+          >
+            <LinkedIn />
           </Link>
         </div>
         <div className="hidden max-lg:flex items-center max-lg:flex-none  text-white"></div>
@@ -84,8 +92,16 @@ const Header: FC<HeaderPros> = ({ items }) => {
                   title="GitHub"
                   className="text-gray-400"
                 >
-                  <GitHub className="mr-5" fontSize="small" />
+                  <GitHub className="mr-5" fontSize="medium" />
                 </Link>
+                <Link
+                  to={"https://linkedin.com/in/edgardo-de-la-hoz-1b101b24b"}
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                  className="text-gray-400 "
+                >
+                  <LinkedIn className="mr-5" fontSize="medium"/>
+              </Link>
               </div>
             </div>
           </AccordionSummary>
@@ -95,7 +111,7 @@ const Header: FC<HeaderPros> = ({ items }) => {
                 {items.map((item, index) => (
                   <li
                     key={index}
-                    className="hover:text-green-400  border-b-[1px] border-b-zinc-500"
+                    className="hover:text-[#0091ea]  border-b-[1px] border-b-zinc-500"
                   >
                     {<Link to={`${item.link}`}><p>{item.label}</p></Link>}
                   </li>

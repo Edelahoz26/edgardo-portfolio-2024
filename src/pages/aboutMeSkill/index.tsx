@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { AboutMeSkillProps } from '../../types/AboutMeSkill'
+import { AboutMeSkillProps } from '../../types'
 
 const AboutMeSkill: FC<AboutMeSkillProps> = ({skills}) => {
     return (
@@ -14,7 +14,7 @@ const AboutMeSkill: FC<AboutMeSkillProps> = ({skills}) => {
               className="flex flex-col items-center transform hover:scale-110 transition-transform duration-300"
             >
               <skill.icon className={`text-6xl mb-4 text-${skill.color}`} />
-              <p className="text-lg font-medium text-gray-700">{skill.name}</p>
+              <p className="text-lg font-medium text-[#eeeeee]">{skill.name}</p>
             </div>
           ))}
         </div>
