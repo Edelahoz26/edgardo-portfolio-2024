@@ -64,7 +64,7 @@ const Home = () => {
     {title: "Login Page", 
       description: "Este sitio web es un login page, con autenticación de usuarios y registro. Realizado en React Native con Firebase.", 
       imgCard: `${imgProyect4}`,
-      linkProject:"#",
+      linkProject:"https://github.com/Edelahoz26/Login-React-Native-Firebase.git",
       icon: TbBrandReactNative},
 /*     {title: "Proyecto 4", 
       description: "Descripción del proyecto 4", 
