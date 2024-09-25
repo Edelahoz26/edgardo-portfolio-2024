@@ -11,7 +11,6 @@ import { TbBrandReactNative } from "react-icons/tb";
 import Project from "../projects";
 import TitleSection from "../../components/TitleSection/TitleSection";
 import { CardProject } from "../../types/Cards";
-import imgProyect1 from '../../assets/images/proyect1svg.svg'
 import imgProyect2 from '../../assets/images/proyect2svg.svg'
 import imgProyect3 from '../../assets/images/proyect3svg.svg'
 import imgProyect4 from '../../assets/images/proyect4svg.svg'
