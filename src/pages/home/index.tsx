@@ -1,6 +1,6 @@
 import Footer from "../../components/Footer/Footer";
 import backgroundHero from "../../assets/images/backgroundHero.jpg"
-import { lazy } from "react";
+import { lazy, RefObject, useRef } from "react";
 import { MenuItem } from "../../types/menuItem";
 import { LandingPageContent, /* ProgressBar */ } from "../../types";
 import { AboutMeSkill as Skill } from "../../types";
@@ -22,19 +22,30 @@ const AboutMe = lazy(()=> import ("../aboutMe"));
 
 const Home = () => {
 
+  const headerRef = useRef(null);
+  const landingPageRef = useRef(null);
+  const aboutMeRef = useRef(null);
+  const aboutMeSkillRef = useRef(null);
+  const projectsRef = useRef(null);
+
+  const scrollToSection = (ref: RefObject<HTMLElement>) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const menuItems: MenuItem[] = [
-    { label: 'Inicio', link: '/' },
-    { label: 'Acerca de mí' },
-    { label: 'Habilidades' },
-    { label: 'Proyectos' },
-    { label: 'Contactarme' },
+    { label: 'Inicio', onClick: () => scrollToSection(landingPageRef) },
+    { label: 'Acerca de mí',  onClick: () => scrollToSection(aboutMeRef) },
+    { label: 'Habilidades',  onClick: () => scrollToSection(aboutMeSkillRef) },
+    { label: 'Proyectos',  onClick: () => scrollToSection(projectsRef) },
+    /* { label: 'Contactarme',  onClick: () => scrollToSection() }, */
   ];
 
   const landingPageContent: LandingPageContent = {
     greeting: "Hola, soy Edgardo",
     title: "Desarrollador Frontend",
     description1: "Apasionado por el aprendizaje continuo",
-    backgroundLandingPage: `${backgroundHero}`
+    backgroundLandingPage: `${backgroundHero}`,
+    onClick: () => scrollToSection(aboutMeRef),
   };
 
   const skills: Skill[] = [
@@ -77,34 +88,36 @@ const Home = () => {
     <div className="flex  max-lg:flex-col min-h-screen">
       {/* HEADER */}
       {/* max-lg:relative */}
-      <div className="h-screen max-lg:h-[5.8vh] w-[14%] fixed flex max-lg:w-full z-10">
-        <Header items={menuItems}/>
-      </div>
+      <header ref={headerRef}>
+        <div className="h-screen max-lg:h-[5.8vh] w-[14%] fixed flex max-lg:w-full z-10">
+            <Header items={menuItems}/>
+        </div>
+      </header>
       {/* Main */}
       <div className="ml-auto w-[86%]  max-lg:w-full z-0">
         <main>
-          <section>
+          <section ref={landingPageRef}>
             <div className="h-screen w-full bg-cover bg-center overflow-hidden max-lg:bg-cover"  
               style={{backgroundImage: `linear-gradient(rgba(17, 20, 24, 0.7), rgba(17, 20, 24, 0.7)), url(${landingPageContent.backgroundLandingPage})`}}>
               <LandingPage content={landingPageContent}/>
             </div>
           </section>
-          <section>
+          <section ref={aboutMeRef}>
             <div className="w-full py-[72px] px-14 max-lg:px-3 flex flex-col text-[#eeeeee] bg-[#111418] border-b-zinc-800 border-b-[2px]">
                 <TitleSection items={{title:"ACERCA DE Mí", subTitle:"Conóceme Más"}}/>
                 <AboutMe />
             </div>
           </section>
-          <section>
+          <section ref={aboutMeSkillRef}>
           <div className="w-full py-[72px] px-14 max-lg:px-3 flex flex-col text-[#111418] bg-[#111418] border-b-zinc-800 border-b-[2px]">
               <TitleSection items={{title:"ACERCA DE MIS",subTitle:"Habilidades"}}/>
               <AboutMeSkill skills={skills}/>
             </div>
           </section>
-          <section>
-          <div className="w-full py-[72px] px-5 max-lg:px-3 flex flex-col bg-[#111418] text-[#111418] border-b-zinc-800 border-b-[2px]">
-          <TitleSection items={{title: "Portafolio", subTitle:"Proyectos"}}/>
-              <Project items={cardProject}/>
+          <section ref={projectsRef}>
+            <div className="w-full py-[72px] px-5 max-lg:px-3 flex flex-col bg-[#111418] text-[#111418] border-b-zinc-800 border-b-[2px]">
+              <TitleSection items={{title: "Portafolio", subTitle:"Proyectos"}}/>
+                <Project items={cardProject}/>
             </div>
           </section>
         </main>

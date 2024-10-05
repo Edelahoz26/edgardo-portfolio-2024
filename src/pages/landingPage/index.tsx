@@ -20,7 +20,7 @@ const LandingPage: FC<LandingPageProps>= ({content}) => {
           transition:"all 0.5s ease",
           '&:hover': { background: "#0091ea",color:"white", border:"2px solid #0091ea"},
        }} className="">Contáctame</Button>
-       <span className="absolute bottom-0 animate-bounce cursor-pointer">
+       <span onClick={content.onClick} className="absolute bottom-0 animate-bounce cursor-pointer">
         <KeyboardArrowDownIcon sx={{fontSize:"40px"}} />
        </span>
     </div>

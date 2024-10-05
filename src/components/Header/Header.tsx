@@ -37,7 +37,7 @@ const Header: FC<HeaderPros> = ({ items }) => {
                   key={index}
                   className="hover:text-[#0091ea] font-medium transition-all duration-[0.2s] ease-in"
                 >
-                  {<Link to={`${item.link}`}><p>{item.label}</p></Link>}
+                  {<button onClick={item.onClick}><p>{item.label}</p></button>}
                 </li>
               ))}
             </ul>
@@ -90,17 +90,17 @@ const Header: FC<HeaderPros> = ({ items }) => {
                   to={"https://github.com/Edelahoz26"}
                   aria-label="GitHub"
                   title="GitHub"
-                  className="text-gray-400"
+                  className="text-gray-400 mr-5"
                 >
-                  <GitHub className="mr-5" fontSize="medium" />
+                  <GitHub className="" fontSize="medium" />
                 </Link>
                 <Link
                   to={"https://linkedin.com/in/edgardo-de-la-hoz-1b101b24b"}
                   aria-label="LinkedIn"
                   title="LinkedIn"
-                  className="text-gray-400 "
+                  className="text-gray-400 mr-5"
                 >
-                  <LinkedIn className="mr-5" fontSize="medium"/>
+                  <LinkedIn className="" fontSize="medium"/>
               </Link>
               </div>
             </div>
@@ -113,7 +113,7 @@ const Header: FC<HeaderPros> = ({ items }) => {
                     key={index}
                     className="hover:text-[#0091ea]  border-b-[1px] border-b-zinc-500"
                   >
-                    {<Link to={`${item.link}`}><p>{item.label}</p></Link>}
+                    {<button onClick={item.onClick}><p>{item.label}</p></button>}
                   </li>
                 ))}
               </ul>
