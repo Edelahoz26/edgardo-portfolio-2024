@@ -8,7 +8,7 @@ import curriculum from "../../assets/pdf/Edgardo_De la hoz_CV.pdf";
 import imgColombia from "../../assets/images/colombia.png"
 
 const AboutMe = () => {
-  const textToCopy = "delahozedgardo4@gmail.com";
+  const textToCopy = "delahoze64@gmail.com";
   const [isClicked, setIsClicked] = useState(false);
 
   const handleCopy = async () => {
@@ -51,7 +51,7 @@ const AboutMe = () => {
             </span>
           </p>
           <p className="flex gap-2 border-b-[#eaeaea] border-b-2 pb-2">
-            <span className="font-semibold ">Edad:</span> 25
+            <span className="font-semibold ">Edad:</span> 26
           </p>
           <p className="flex gap-2 border-b-[#eaeaea] mb-4">
             <span className="font-semibold ">De:</span> Barranquilla, Atlantico{" "}

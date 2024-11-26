@@ -15,7 +15,6 @@ import imgProyect2 from '../../assets/images/proyect2svg.svg'
 import imgProyect3 from '../../assets/images/proyect3svg.svg'
 import imgProyect4 from '../../assets/images/proyect4svg.svg'
 
-
 const Header = lazy(()=> import ("../../components/Header/Header"));
 const LandingPage = lazy(()=> import ("../landingPage"));
 const AboutMe = lazy(()=> import ("../aboutMe"));
@@ -37,7 +36,6 @@ const Home = () => {
     { label: 'Acerca de mí',  onClick: () => scrollToSection(aboutMeRef) },
     { label: 'Habilidades',  onClick: () => scrollToSection(aboutMeSkillRef) },
     { label: 'Proyectos',  onClick: () => scrollToSection(projectsRef) },
-    /* { label: 'Contactarme',  onClick: () => scrollToSection() }, */
   ];
 
   const landingPageContent: LandingPageContent = {
