@@ -6,6 +6,8 @@ export interface CardProject {
     imgCard: string;
     linkProject: string;
     icon: IconType;
+    icon2?: IconType;
+    icon3?: IconType;
 }
 
 export interface CardProjectProps {

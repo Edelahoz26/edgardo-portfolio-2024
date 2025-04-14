@@ -14,6 +14,7 @@ import { CardProject } from "../../types/Cards";
 import imgProyect2 from '../../assets/images/proyect2svg.svg'
 import imgProyect3 from '../../assets/images/proyect3svg.svg'
 import imgProyect4 from '../../assets/images/proyect4svg.svg'
+import imgProyect5 from '../../assets/images/rent-books.svg'
 
 const Header = lazy(()=> import ("../../components/Header/Header"));
 const LandingPage = lazy(()=> import ("../landingPage"));
@@ -64,6 +65,7 @@ const Home = () => {
       imgCard: `${imgProyect3}`,
       linkProject:"https://inspiring-llama-c2604f.netlify.app/",
       icon: FaHtml5,
+      icon2: FaCss3Alt
     },
     {title: "Formulario", 
       description: "Este es un formulario de Usuarios, donde se puede registrar, editar y eliminar.", 
@@ -74,12 +76,16 @@ const Home = () => {
       description: "Este sitio web es un login page, con autenticación de usuarios y registro. Realizado en React Native con Firebase.", 
       imgCard: `${imgProyect4}`,
       linkProject:"https://github.com/Edelahoz26/Login-React-Native-Firebase.git",
-      icon: TbBrandReactNative},
-/*     {title: "Proyecto 4", 
-      description: "Descripción del proyecto 4", 
-      imgCard: `${imgProyect1}`,
-      linkProject:"#",
-      icon: SiTypescript}, */
+      icon: TbBrandReactNative,
+      icon2: SiTypescript},
+    {title: "Renta de Libro", 
+      description: "Este sitio esta realizado para hacer renta de libros, se utilizo Firebase para almacenar datos. ", 
+      imgCard: `${imgProyect5}`,
+      linkProject:"https://rented-books.netlify.app",
+      icon: FaReact,
+      icon2: SiTypescript,
+      icon3: SiTailwindcss
+    },  
   ];
   
   return (

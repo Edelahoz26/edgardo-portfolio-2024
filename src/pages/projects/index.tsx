@@ -36,7 +36,17 @@ const Project: FC<CardProjectProps> = ({items}) => {
                     </Button>
                     </div>
                     <div className="flex gap-3 w-full justify-end pt-2 ">
-                        <span className="text-2xl font-semibold text-gray-400 bg-gray-800 rounded-full px-2 py-0.5"><item.icon /></span>
+                        <span className="text-2xl font-semibold text-gray-400 bg-gray-800 rounded-full px-2 py-0.5"><item.icon/> </span>
+                        {item.icon2 && (
+                          <span className="text-2xl font-semibold text-gray-400 bg-gray-800 rounded-full px-2 py-0.5">
+                            <item.icon2 />
+                          </span>
+                        )}
+                        {item.icon3 && (
+                          <span className="text-2xl font-semibold text-gray-400 bg-gray-800 rounded-full px-2 py-0.5">
+                            <item.icon3 />
+                          </span>
+                        )}
                     </div>
               </div>
           </div>
